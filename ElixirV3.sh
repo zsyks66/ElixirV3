@@ -1,4 +1,6 @@
+
 #!/bin/bash
+
 # 检查是否以root用户运行脚本
 if [ "$(id -u)" != "0" ]; then
     echo "此脚本需要以root用户权限运行。"
@@ -186,10 +188,9 @@ function main_menu() {
     read -p "请输入选项（1-4）: " OPTION
 
     case $OPTION in
-    1) add_nodes ;;
+    1) install_node ;;
     2) check_docker_logs ;;
-    3) delete_containers_by_quantity ;;
-    4) update_all_containers ;;
+    3) delete_docker_container ;;
     *) echo "无效选项。" ;;
     esac
 }
