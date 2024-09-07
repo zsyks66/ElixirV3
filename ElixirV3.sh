@@ -152,8 +152,7 @@ function delete_containers_by_quantity() {
     fi
 
     # 获取要删除的容器ID
-    containers_to_delete=$(echo "$containers" | head -n
-"$num_to_delete")
+    containers_to_delete=$(echo "$containers" | head -n$num_to_delete")
     
     # 停止并删除指定数量的容器
     echo "删除以下容器: $containers_to_delete"
